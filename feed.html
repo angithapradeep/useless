@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confession Feed</title>
+  <style>
+    body {
+      background-color: #ffe0f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feed-box {
+      background: #ffedf7;
+      padding: 36px 36px 26px 36px;
+      border-radius: 22px;
+      box-shadow: 0 6px 16px #ff8fa3;
+      text-align: center;
+      min-width: 340px;
+      max-width: 500px;
+    }
+    .confession {
+      color: #c2185b;
+      background: #f9bbd0;
+      border-radius: 10px;
+      padding: 16px 14px;
+      margin: 12px 0;
+      box-shadow: 0 2px 6px #fbb1c5;
+      text-align: left;
+      font-size: 16px;
+      word-break: break-word;
+    }
+    .btn-pink {
+      background: #ff6f91;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 28px;
+      font-size: 17px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-pink:hover {
+      background: #e75480;
+    }
+    h1 { color: #bc4873; margin-bottom: 19px; }
+    .notfound { color: #ad1457; background: #fff0f6;
+                padding: 20px; border-radius: 10px; margin-bottom: 20px;}
+  </style>
+</head>
+<body>
+  <div class="feed-box">
+    <h1>Confessions Feed 💬</h1>
+    {% if confessions %}
+      {% for confession in confessions %}
+        <div class="confession">{{ confession }}</div>
+      {% endfor %}
+    {% else %}
+      <div class="notfound">No confessions yet.</div>
+    {% endif %}
+    <a href="{{ url_for('index') }}"><button class="btn-pink">Back</button></a>
+  </div>
+</body>
+</html>

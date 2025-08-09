@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome!</title>
+  <style>
+    body {
+      background-color: #ffb6c1;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .center-box {
+      background: #ffc1cc;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px #e87ea6;
+      text-align: center;
+    }
+    button {
+      background: #ff69b4;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 15px;
+    }
+    button:hover {
+      background: #ff1493;
+    }
+    h1 { color: #c2185b; }
+  </style>
+</head>
+<body>
+  <div class="center-box">
+    <h1>BURN BOOK 💗</h1>
+    <h2>lets spill some tea</h2>
+    <form action="{{ url_for('index') }}">
+      <button type="submit">Enter Confession Portal</button>
+    </form>
+  </div>
+</body>
+</html>

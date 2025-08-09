@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Write Your Confession</title>
+  <style>
+    body {
+      background-color: #ffe4ec;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .confess-box {
+      background: #ffe0e9;
+      padding: 40px 35px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px #ff8fa3;
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      height: 110px;
+      resize: none;
+      border-radius: 10px;
+      border: 2px solid #ff99bb;
+      background: #fff0f6;
+      font-size: 16px;
+      padding: 12px;
+      margin-bottom: 18px;
+      color: #ad1457;
+      box-shadow: 0 2px 8px #fbb1c5;
+    }
+    .btn-pink {
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-size: 18px;
+      margin: 8px 10px 0 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-pink:hover {
+      background: #e75480;
+    }
+    h1 { color: #c2185b; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="confess-box">
+    <h1>Write Your Confession 💗</h1>
+    <form method="POST" style="margin-bottom: 10px;">
+      <textarea name="confession" placeholder="Type your secret here..."></textarea>
+      <br>
+      <button type="submit" class="btn-pink">Post Confession 💗</button>
+    </form>
+    <form action="{{ url_for('feed') }}">
+      <button type="submit" class="btn-pink">View Confessions 💬</button>
+    </form>
+  </div>
+</body>
+</html>
