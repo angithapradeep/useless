@@ -39,9 +39,8 @@ venv\Scripts\activate
 pip install -r requirements.txt  
 
 
-# Run  
-python app.py   
-http://127.0.0.1:5000  
+# Run     
+https://useless-five.vercel.app/
 
 
 ### Project Documentation
