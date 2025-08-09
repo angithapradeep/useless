@@ -38,7 +38,8 @@ python -m venv venv
 venv\Scripts\activate    
 pip install -r requirements.txt  
 
-#clone the repo
+# clone the repo
+https://github.com/angithapradeep/useless.git
 
 
 # Run     
