@@ -38,6 +38,8 @@ python -m venv venv
 venv\Scripts\activate    
 pip install -r requirements.txt  
 
+#clone the repo
+
 
 # Run     
 https://useless-five.vercel.app/
